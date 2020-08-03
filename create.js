@@ -17,7 +17,7 @@ export const main = handler(async (event, context) => {
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
       questionId: uuid.v1(),
-      questionStatement: data.content,
+      questionStatement: data.questionStatement,
       attachment: data.attachment,
       createdAt: Date.now()
     }
