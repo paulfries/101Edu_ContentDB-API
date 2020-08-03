@@ -1,4 +1,4 @@
-service: notes-app-2-api
+service: contentdb-app-api
 
 # Create an optimized package for our functions
 package:
@@ -14,7 +14,7 @@ custom:
   # commands. Or fallsback to what we have set in the provider section.
   stage: ${opt:stage, self:provider.stage}
   # Set the table name here so we can use it while testing locally
-  tableName: ${self:custom.stage}-notes
+  tableName: ${self:custom.stage}-contentdb
 
 provider:
   name: aws
@@ -45,11 +45,11 @@ provider:
       # Restrict our IAM role permissions to
       # the specific table for the stage
       Resource:
-        - "Fn::GetAtt": [ NotesTable, Arn ]
+        - "Fn::GetAtt": [ QuestionsTable, Arn ]
 
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
-  # - path: url path is /notes
+  # - path: url path is /problems
   # - method: POST request
   # - cors: enabled CORS (Cross-Origin Resource Sharing) for browser cross
   #     domain api call
@@ -58,7 +58,7 @@ functions:
     handler: create.main
     events:
       - http:
-          path: notes
+          path: questions
           method: post
           cors: true
           authorizer: aws_iam
@@ -70,7 +70,7 @@ functions:
     handler: get.main
     events:
       - http:
-          path: notes/{id}
+          path: questions/{id}
           method: get
           cors: true
           authorizer: aws_iam
@@ -82,7 +82,7 @@ functions:
     handler: list.main
     events:
       - http:
-          path: notes
+          path: questions
           method: get
           cors: true
           authorizer: aws_iam
@@ -94,7 +94,7 @@ functions:
     handler: update.main
     events:
       - http:
-          path: notes/{id}
+          path: questions/{id}
           method: put
           cors: true
           authorizer: aws_iam
@@ -106,7 +106,7 @@ functions:
     handler: delete.main
     events:
       - http:
-          path: notes/{id}
+          path: questions/{id}
           method: delete
           cors: true
           authorizer: aws_iam
