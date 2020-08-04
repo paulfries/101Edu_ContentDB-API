@@ -19,6 +19,7 @@
     "serverless-offline": "^5.3.3"
   },
   "dependencies": {
+    "semantic-ui-react": "^1.1.1",
     "uuid": "^7.0.3"
   }
 }
