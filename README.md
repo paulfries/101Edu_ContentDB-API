@@ -1,4 +1,22 @@
-# Serverless Node.js Starter
+# Chem101 Content Database - Infrastructure as Code
+---
+This code deploys the "back end" infrastrucure in AWS that is needed to support the Content Management Database.
+
+The following AWS Services are provisioned:
+- **AWS Cognito**
+  - Used for application user authentication and user management
+- **DynamoDB**
+  - Managed database service that holds the application data
+- **API Gateway**
+  - Managed service for handling all of the REST API calls from the application
+- **AWS Lambda**
+  - Serverless code execution. Called by API gateway. Lambda is what actually performs the CRUD actions on the DynamoDB database
+- **AWS S3**
+  - Object Storage solution used to store and serve the file attachments
+
+---
+### Note
+This code makes use of the Serverless NodeJS module. Serverless is a code framework that allows one to compose, deploy, and manage infrastrucure as code. 
 
 A Serverless starter that adds ES6, TypeScript, serverless-offline, linting, environment variables, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
