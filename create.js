@@ -12,6 +12,7 @@ export const main = handler(async (event, context) => {
     //             as the user id of the authenticated user
     // - 'questionId': a unique uuid
     // - 'questionStatement': Question Statement parsed from request body
+    // - 'questionType': Type of question (Multiple-Choice)
     // - 'attachment': parsed from request body
     // - 'createdAt': current Unix timestamp
     Item: {
@@ -19,6 +20,7 @@ export const main = handler(async (event, context) => {
       questionId: uuid.v1(),
       questionStatement: data.questionStatement,
       questionStatus: data.questionStatus,
+      questionType: data.questionType,
       attachment: data.attachment,
       createdAt: Date.now()
     }

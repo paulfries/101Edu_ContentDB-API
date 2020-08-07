@@ -14,10 +14,11 @@ export const main = handler(async (event, context) => {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: "SET questionStatement = :questionStatement, attachment = :attachment, questionStatus = :questionStatus",
+    UpdateExpression: "SET questionStatement = :questionStatement, attachment = :attachment, questionStatus = :questionStatus, questionType = :questionType",
     ExpressionAttributeValues: {
       ":attachment": data.attachment || null,
       ":questionStatement": data.questionStatement || null,
+      ":questionType":  data.questionType || null,
       ":questionStatus": data.questionStatus || null
     },
     // 'ReturnValues' specifies if and how to return the item's attributes,
