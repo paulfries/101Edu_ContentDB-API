@@ -14,12 +14,16 @@ export const main = handler(async (event, context) => {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: "SET questionStatement = :questionStatement, attachment = :attachment, questionStatus = :questionStatus, questionType = :questionType",
+    UpdateExpression: "SET questionStatement = :questionStatement, attachment = :attachment, questionStatus = :questionStatus, questionType = :questionType, assignedTo = :assignedTo, authoredBy = :authoredBy, firstReviewer = :firstReviewer, secReviewer = :secReviewer",
     ExpressionAttributeValues: {
       ":attachment": data.attachment || null,
       ":questionStatement": data.questionStatement || null,
       ":questionType":  data.questionType || null,
-      ":questionStatus": data.questionStatus || null
+      ":questionStatus": data.questionStatus || null,
+      ":assignedTo": data.assignedTo || null,
+      ":authoredBy": data.authoredBy || null,
+      ":firstReviewer": data.firstReviewer || null,
+      ":secReviewer": data.secReviewer || null
     },
     // 'ReturnValues' specifies if and how to return the item's attributes,
     // where ALL_NEW returns all attributes of the item after the update; you
