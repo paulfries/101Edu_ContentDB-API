@@ -17,6 +17,10 @@ export const main = handler(async (event, context) => {
     // - 'createdAt': current Unix timestamp
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
+      assignedTo: data.assignedTo,
+      authoredBy: data.authoredBy,
+      firstReveiwer: data.firstReveiwer,
+      secReviewer: data.secReviewer,
       questionId: uuid.v1(),
       questionStatement: data.questionStatement,
       questionStatus: data.questionStatus,
