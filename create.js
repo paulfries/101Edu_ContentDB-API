@@ -47,9 +47,9 @@ export const main = handler(async (event, context) => {
     // - 'mcOption5' : data.mcOption5 
     // - 'mcOption5Feedback' : data.mcOption5Feedback 
     // - 'mcOption5FeedbackImageName' : data.mcOption5FeedbackImageName 
-    // - 'correctAnswer1Thru5' data.correctAnswer1Thru5 NEED TO ADD
-    // - 'solution' : data.solution NEED TO ADD
-    // - 'solutionImage' : data.solutionImage NEED TO ADD
+    // - 'correctAnswer1Thru5' data.correctAnswer1Thru5 
+    // - 'solution' : data.solution 
+    // - 'solutionImage' : data.solutionImage 
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
       assignedTo: data.assignedTo,
