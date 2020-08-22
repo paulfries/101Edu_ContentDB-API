@@ -35,7 +35,7 @@ export const main = handler(async (event, context) => {
       ":mcOption2": data.mcOption2 || null,
       ":mcOption2Feedback": data.mcOption2Feedback || null,
       ":mcOption2FeedbackImageName": data.mcOption2FeedbackImageName | null,
-      ":mcOptoin3": data.mcOption3 || null,
+      ":mcOption3": data.mcOption3 || null,
       ":mcOption3Feedback": data.mcOption3Feedback || null,
       ":mcOption3FeedbackImageName": data.mcOption3FeedbackImageName || null,
       ":mcOption4": data.mcOption4 || null,
