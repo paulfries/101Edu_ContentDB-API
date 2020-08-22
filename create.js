@@ -52,12 +52,12 @@ export const main = handler(async (event, context) => {
     // - 'solutionImage' : data.solutionImage
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
+      questionId: uuid.v1(),
       assignedTo: data.assignedTo,
       authoredBy: data.authoredBy,
-      firstReveiwer: data.firstReveiwer,
+      firstReviewer: data.firstReviewer,
       secReviewer: data.secReviewer,
-      questionId: uuid.v1(),
-      unit: data.unit,
+      questionUnit: data.questionUnit,
       topic: data.topic,
       openStaxTrad2e: data.openStaxTrad2e,
       openStaxAF2e: data.openStaxAF2e,

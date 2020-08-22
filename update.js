@@ -14,14 +14,15 @@ export const main = handler(async (event, context) => {
     },
     // 'UpdateExpression' defines the attributes to be updated
     // 'ExpressionAttributeValues' defines the value in the update expression
-    UpdateExpression: "SET questionStatement = :questionStatement, questionImageName = :questionImageName, questionImage = :questionImage, mcAnswerOption1Thru5 = :mcAnswerOption1Thru5," +
-    "mcOption1 = :mcOption1, mcOption1Feedback = :mcOption1Feedback, mcOption1FeedbackImageName = :mcOption1FeedbackImageName, mcOption2 = :mcOption2, mcOption2Feedback = :mcOption2Feedback," +
-    "mcOption2FeedbackImageName = :mcOption2FeedbackImageName, mcOption3 = :mcOption3, mcOption3Feedback = :mcOption3Feedback, mcOption3FeedbackImageName = :mcOption3FeedbackImageName," +
-    "mcOption4 = :mcOption4, mcOption4Feedback = :mcOpton4Feedback, mcOption4FeedbackImageName = :mcOption4FeedbackImageName, mcOption5 = :mcOption5, mcOption5Feedback = :mcOption5Feedback," +
-    "mcOption5FeedbackImageName = :mcOption5FeedbackImageName, correctAnswer1Thru5 = :correctAnswer1Thru5, solution = :solution, solutionImage = :solutionImage, attachment = :attachment," +
-    "questionStatus = :questionStatus, questionType = :questionType, assignedTo = :assignedTo, authoredBy = :authoredBy, firstReviewer = :firstReviewer, secReviewer = :secReviewer," +
-    "unit = :unit, topic = :topic, openStaxTrad2e = :openStaxTrad2e, openStaxAF2e = :openStaxAF2e, thoughtType = :thoughtType, timeSuggested = :timeSuggested, multipart = :multipart," +
-    "globalStatement = :globalStatement, multipartPreamble = :multipartPreamble, childQuestionType = :childQuestionType",
+    UpdateExpression: "SET questionStatement = :questionStatement, questionImageName = :questionImageName, questionImage = :questionImage, mcAnswerOption1Thru5 = :mcAnswerOption1Thru5," + 
+                      "mcOption1 = :mcOption1, mcOption1Feedback = :mcOption1Feedback, mcOption1FeedbackImageName = :mcOption1FeedbackImageName, mcOption2 = :mcOption2, mcOption2Feedback =" +
+                      ":mcOption2Feedback, mcOption2FeedbackImageName = :mcOption2FeedbackImageName, mcOption3 = :mcOption3, mcOption3Feedback = :mcOption3Feedback, mcOption3FeedbackImageName" +
+                      " = :mcOption3FeedbackImageName, mcOption4 = :mcOption4, mcOption4Feedback = :mcOpton4Feedback, mcOption4FeedbackImageName = :mcOption4FeedbackImageName, mcOption5 = " +
+                      ":mcOption5, mcOption5Feedback = :mcOption5Feedback, mcOption5FeedbackImageName = :mcOption5FeedbackImageName, correctAnswer1Thru5 = :correctAnswer1Thru5, solution = " +
+                      ":solution, solutionImage = :solutionImage, attachment = :attachment, questionStatus = :questionStatus, questionType = :questionType, assignedTo = :assignedTo, authoredBy " +
+                      "= :authoredBy, firstReviewer = :firstReviewer, secReviewer = :secReviewer, questionUnit = :questionUnit, topic = :topic, openStaxTrad2e = :openStaxTrad2e, openStaxAF2e = " +
+                      ":openStaxAF2e, thoughtType = :thoughtType, timeSuggested = :timeSuggested, multipart = :multipart, globalStatement = :globalStatement, multipartPreamble = " +
+                      ":multipartPreamble, childQuestionType = :childQuestionType",
     ExpressionAttributeValues: {
       ":attachment": data.attachment || null,
       ":questionStatement": data.questionStatement || null,
@@ -52,7 +53,7 @@ export const main = handler(async (event, context) => {
       ":authoredBy": data.authoredBy || null,
       ":firstReviewer": data.firstReviewer || null,
       ":secReviewer": data.secReviewer || null,
-      ":unit": data.unit || null,
+      ":questionUnit": data.questionUnit || null,
       ":topic": data.topic || null,
       ":openStaxTrad2e": data.openStaxTrad2e || null,
       ":openStaxAF2e": data.openStaxAF2e || null,
