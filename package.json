@@ -17,7 +17,7 @@
     "serverless-bundle": "^2.0.0",
     "serverless-dotenv-plugin": "^2.1.1",
     "serialize-javascript": ">=3.1.0",
-    "serverless-offline": "^5.3.3"
+    "serverless-offline": "^12.0.3"
   },
   "dependencies": {
     "semantic-ui-react": "^1.1.1",
